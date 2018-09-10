@@ -25,7 +25,7 @@ int main (int argc, char *argv[]) {
         // perror("error");
         return 1;
     } else if ((!strcmp(argv[1], getPidsOption)) && (argc == 3)) {
-        n = atoi(argv[1]);
+        n = atoi(argv[2]);
 
         for (i = 1; i < n; i++) {
             if (childpid = fork()){

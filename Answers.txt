@@ -1,0 +1,11 @@
+1) Creates the number of processes entered. last process is 
+    always 0.
+2) 32102 -> 32103 -> 32104 -> 32105
+3) Even when running with 1000000 values I did not observe 
+    any with parent pid of 1. I did not seem to find a maximum.
+4) Placing sleep(10) before the last print f generated a 
+    delay before the program began to print, but did not 
+    otherwise affect executiion.
+5) Prints start happening, occasionaly, out of order.
+6) Prints the output in reverse order.
+7) 

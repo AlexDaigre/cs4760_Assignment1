@@ -11,7 +11,6 @@ int main (int argc, char *argv[]) {
     const char helpOption[] = "-h";
     const char testErrorOption[] = "-p";
     const char getPidsOption[] = "-n";
-    const char getPidsOption[] = "-n";
 
     if (!(argc >= 2)) {
         fprintf(stderr, "Incorrect options. For help: %s -h  \n", argv[0]);
@@ -25,10 +24,10 @@ int main (int argc, char *argv[]) {
         perror(concat(argv[0], ": Error: Detailed error message"));
         // perror("error");
         return 1;
-    } else if ((!strcmp(argv[1], getPidsOption)) && (argc == 5)) {
+    } else if ((!strcmp(argv[1], getPidsOption)) && (argc == 4)) {
         n = atoi(argv[2]);
         k = atoi(argv[3]);
-        char buf[k+1] = "";
+        char buf[k+1];
 
         for (i = 1; i < n; i++) {
             if (childpid = fork()){
@@ -42,7 +41,9 @@ int main (int argc, char *argv[]) {
         }
         buf[k+1] = '\0';
 
-        perror(concat(argv[0], ": Error: Detailed error message"));
+        fprintf(stderr, "hing");
+
+        perror(concat(concat((long)getpid(), " : "), buf));
 
         return 0;  
     } else {

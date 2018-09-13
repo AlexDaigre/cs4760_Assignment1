@@ -8,4 +8,5 @@
     otherwise affect executiion.
 5) Prints start happening, occasionaly, out of order.
 6) Prints the output in reverse order.
-7) 
+7) No visible diffrence in the formating of the lines. I could see no diffrence when running the program multiple times.
+8) 

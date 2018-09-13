@@ -8,7 +8,7 @@ char* concat(const char *s1, const char *s2);
 
 int main (int argc, char *argv[]) {
     pid_t childpid = 0;
-    int i, n, j, m, k;
+    int i, n, j, m, k;sudo apt-get install libc6-dev
     const char helpOption[] = "-h";
     const char testErrorOption[] = "-p";
     const char getPidsOption[] = "-n";
@@ -23,7 +23,6 @@ int main (int argc, char *argv[]) {
         return 0;
     } else if ((!strcmp(argv[1], testErrorOption)) && (argc == 2)) {
         perror(concat(argv[0], ": Error: Detailed error message"));
-        // perror("error");
         return 1;
     } else if ((!strcmp(argv[1], getPidsOption)) && (argc == 5)) {
         n = atoi(argv[2]);
@@ -38,8 +37,10 @@ int main (int argc, char *argv[]) {
 
         for (j = 0; j <= k; j++) {
             wait(NULL);
-            fprintf(stderr, "i:%d process ID:%ld parent ID:%ld child ID:%ld\n",
-                    i, (long)getpid(), (long)getppid(), (long)childpid);
+            fprintf(stderr, "i:%d ", i);
+            fprintf(stderr, "process ID:%ld ", (long)getpid());
+            fprintf(stderr, "parent ID:%ld ", (long)getppid());
+            fprintf(stderr, "child ID:%ld\n", (long)childpid);
             sleep(m);
         }
 

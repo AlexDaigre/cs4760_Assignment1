@@ -8,7 +8,7 @@ char* concat(const char *s1, const char *s2);
 
 int main (int argc, char *argv[]) {
     pid_t childpid = 0;
-    int i, n, j, m, k;sudo apt-get install libc6-dev
+    int i, n, j, m, k;
     const char helpOption[] = "-h";
     const char testErrorOption[] = "-p";
     const char getPidsOption[] = "-n";
